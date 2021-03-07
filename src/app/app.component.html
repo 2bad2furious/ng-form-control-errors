@@ -6,15 +6,7 @@
     <span class="input-group-text" id="username-text">@</span>
     <input type="text" class="form-control" aria-describedby="username-text" id="username-input"
            [placeholder]="'username.placeholder' | translate" [attr.aria-label]="'username.label' | translate"
-           [(ngModel)]="username" #usernameModel="ngModel" required name="username" minlength="5" maxlength="60">
-    <div *ngIf="usernameModel.errors && usernameModel.touched" class="invalid-tooltip d-block">
-      <p class="mb-0" *ngIf="usernameModel.errors.required" translate [translateParams]="usernameModel.errors.required">
-        common.input.required</p>
-      <p class="mb-0" *ngIf="usernameModel.errors.minlength" translate
-         [translateParams]="usernameModel.errors.minlength">common.input.minlength</p>
-      <p class="mb-0" *ngIf="usernameModel.errors.maxlength" translate
-         [translateParams]="usernameModel.errors.maxlength">common.input.maxlength</p>
-    </div>
+           [(ngModel)]="username" required name="username" minlength="5" maxlength="60">
   </div>
   <button [disabled]="form.invalid" class="btn btn-primary align-self-end">Submit</button>
 </form>

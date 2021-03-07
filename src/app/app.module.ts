@@ -6,10 +6,14 @@ import {AppComponent} from './app.component';
 import {FormsModule} from '@angular/forms';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {StaticLoaderService} from './static-loader.service';
+import { AutomaticErrorMessagesDirective } from './automatic-error-messages.directive';
+import { ErrorMessagesComponent } from './error-messages/error-messages.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AutomaticErrorMessagesDirective,
+    ErrorMessagesComponent
   ],
   imports: [
     BrowserModule,
