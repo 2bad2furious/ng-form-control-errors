@@ -1,9 +1,11 @@
 <form #form="ngForm" *ngIf="!success" class="animate__animated animate__flipInX border p-4 d-flex flex-column"
       (ngSubmit)="submit()" style="min-width: 30vw">
   <h1 translate class="ms-3 me-5">heading</h1>
+  <label for="username-input" class="mb-1s" translate>username.label</label>
   <div class="input-group mb-3">
-    <span class="input-group-text" id="username">@</span>
-    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="username"
+    <span class="input-group-text" id="username-text">@</span>
+    <input type="text" class="form-control" aria-describedby="username-text" id="username-input"
+           [placeholder]="'username.placeholder' | translate" [attr.aria-label]="'username.label' | translate"
            [(ngModel)]="username" #usernameModel="ngModel" required name="username" minlength="5" maxlength="60">
     <div *ngIf="usernameModel.errors && usernameModel.touched" class="invalid-tooltip d-block">
       <p class="mb-0" *ngIf="usernameModel.errors.required" translate [translateParams]="usernameModel.errors.required">

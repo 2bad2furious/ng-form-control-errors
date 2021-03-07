@@ -14,7 +14,8 @@ export class StaticLoaderService implements TranslateLoader {
       maxlength: 'Maximum length is {{ requiredLength }}'
     },
     success: 'Success, your username is <b>{{username}}</b>.',
-    heading: 'State you username'
+    heading: 'Awesome form',
+    username: {placeholder: '2bad2furious', label: 'Username*'}
   };
 
   getTranslation(lang: string): Observable<any> {
